@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/feed_item_layout_padding">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/feed_item_profile_image"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/ic_account"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/feed_item_title"
+            android:text="Default"
+            android:textColor="@color/black"
+            android:textSize="@dimen/feed_item_title_textSize"
+            android:paddingTop="@dimen/feed_item_title_padding_top"
+            android:layout_marginLeft="@dimen/feed_item_title_margin_left"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/feed_item_profile_image" />
+
+        <ImageView
+
+            android:layout_toRightOf="@+id/feed_item_profile_image"
+            android:layout_below="@+id/feed_item_title"
+            android:layout_marginLeft="@dimen/feed_item_title_margin_left"
+            android:src="@drawable/ic_date"
+            android:id="@+id/feed_item_year_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="year"
+            android:gravity="center"
+            android:id="@+id/feed_item_year"
+            android:layout_below="@+id/feed_item_title"
+            android:layout_toRightOf="@+id/feed_item_year_icon"
+            android:textSize="@dimen/feed_item_year_size"
+            android:paddingLeft="@dimen/feed_item_year_padding_left" />
+
+        <TextView
+            android:layout_marginTop="@dimen/feed_item_post_margin_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/feed_item_post"
+            android:text="default post"
+            android:paddingLeft="@dimen/feed_item_post_padding_left"
+            android:layout_below="@+id/feed_item_profile_image" />
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
